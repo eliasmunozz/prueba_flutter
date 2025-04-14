@@ -6,11 +6,11 @@ class ImageWithTextWidget extends StatelessWidget {
   final String date;
 
   const ImageWithTextWidget({
-    Key? key,
+    super.key,
     required this.imagePath,
     required this.text,
     required this.date,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -31,6 +31,7 @@ class ImageWithTextWidget extends StatelessWidget {
       ),
       padding: EdgeInsets.all(0.0),
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           ClipRRect(
             borderRadius: BorderRadius.only(
@@ -46,39 +47,42 @@ class ImageWithTextWidget extends StatelessWidget {
           ),
           SizedBox(height: 8.0),
 
-          // Contenedor para alinear fecha y título a la izquierda
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 8.0),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  date,
-                  style: TextStyle(
-                    fontSize: 12.0,
-                    color: Colors.grey,
-                  ),
-                  textAlign: TextAlign.left,
+          // Fecha alineada a la izquierda sin padding
+          Align(
+            alignment: Alignment.centerLeft,
+            child: Padding(
+              padding: EdgeInsets.symmetric(horizontal: 15.0),
+              child: Text(
+                date,
+                style: TextStyle(
+                  fontSize: 12.0,
+                  color: Colors.grey,
                 ),
-                SizedBox(height: 4.0),
-                Text(
-                  text,
-                  style: TextStyle(
-                    fontSize: 16.0,
-                    fontWeight: FontWeight.bold,
-                  ),
-                  textAlign: TextAlign.left,
-                  maxLines: null, // Permite múltiples líneas si es necesario
-                ),
-              ],
+              ),
             ),
           ),
+
+          SizedBox(height: 4.0),
+
+          // Título alineado a la izquierda sin padding
+          Align(
+            alignment: Alignment.centerLeft,
+            child: Padding(
+              padding: EdgeInsets.symmetric(horizontal: 15.0),
+              child: Text(
+                text,
+                style: TextStyle(
+                  fontSize: 16.0,
+                  fontWeight: FontWeight.bold,
+                ),
+                maxLines: null,
+              ),
+            ),
+          ),
+
           SizedBox(height: 8.0),
         ],
       ),
     );
   }
 }
-
-
-

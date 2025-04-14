@@ -5,10 +5,10 @@ class LocalImageSliderWithComment extends StatefulWidget {
   final String comment;
 
   const LocalImageSliderWithComment({
-    Key? key,
+    super.key,
     required this.imageData,
     required this.comment,
-  }) : super(key: key);
+  });
 
   @override
   _LocalImageSliderWithCommentState createState() => _LocalImageSliderWithCommentState();
