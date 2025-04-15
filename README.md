@@ -17,9 +17,9 @@ Esta aplicación es una réplica móvil del sitio web oficial de la Agencia Naci
 ## Páginas replicadas
 
 1. Página de Inicio  
-2. Página Noticias 
-3. Página Eventos
-4. Página Sociales
+2. Página Noticias (desde la sección Noticias de la página de inicio) 
+3. Página Quiénes Somos / Misión 
+4. Página Reportar (desde el Menú desplegable)
 
 > Se mantuvo la estructura, colores, tipografía y organización de contenidos.
 
