@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import '../widgets/top_bar.dart';
-import '../widgets/menu_bar.dart'; 
+import '../widgets/menu_bar.dart';
 import '../widgets/slider.dart';
-import '../widgets/articulo_home.dart'; 
-import '../widgets/boton_home.dart'; 
+import '../widgets/articulo_home.dart';
+import '../widgets/boton_home.dart';
 import '../widgets/eventos_home.dart';
 import '../widgets/footer_ah.dart';
 import '../widgets/sociales_footer.dart';
 import 'articulo_page.dart';
 
-class MyHomePage extends StatelessWidget {
-  const MyHomePage({super.key});
+class PaginaInicio extends StatelessWidget {
+  const PaginaInicio({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -28,40 +28,38 @@ class MyHomePage extends StatelessWidget {
                 imageData: [
                   {
                     'path': 'assets/images/logo_barra.png',
-                    'text': 'Primera imagen destacada',
+                    'text': 'Destacado 1',
                   },
                   {
                     'path': 'assets/images/logo_barra.png',
-                    'text': '¡Nueva colección disponible!',
+                    'text': 'Destacado 2',
                   },
                   {
                     'path': 'assets/images/logo_barra.png',
-                    'text': 'Ofertas por tiempo limitado',
+                    'text': 'Destacado 3',
                   },
                 ],
-                comment: 'Hay que quitar este comentario xd',
+                comment: '',
               ),
               const SizedBox(height: 20),
               const Text(
                 'Noticias Recientes',
-                style: TextStyle(
-                  fontSize: 30.0,
-                ),
+                style: TextStyle(fontSize: 30.0),
               ),
               const SizedBox(height: 20),
-
-              
               GestureDetector(
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => const ArticuloPage()),
+                    MaterialPageRoute(
+                      builder: (context) => const ArticuloPage(),
+                    ),
                   );
                 },
                 child: const ArticuloHome(
                   imagePath: 'assets/images/noticia1.png',
                   text: 'Noticia 1: Lanzamiento del nuevo producto',
-                  date: '01/10/20',
+                  date: '01/10/25',
                 ),
               ),
               const SizedBox(height: 10),
@@ -69,13 +67,15 @@ class MyHomePage extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => const ArticuloPage()),
+                    MaterialPageRoute(
+                      builder: (context) => const ArticuloPage(),
+                    ),
                   );
                 },
                 child: const ArticuloHome(
                   imagePath: 'assets/images/noticia1.png',
                   text: 'Noticia 2: Actualización importante',
-                  date: '01/10/20',
+                  date: '01/10/25',
                 ),
               ),
               BotonHomeSig(
@@ -85,21 +85,18 @@ class MyHomePage extends StatelessWidget {
                 },
               ),
 
-              const Text(
-                'Eventos',
-                style: TextStyle(
-                  fontSize: 30.0,
-                ),
-              ),
-              const SizedBox(height: 20),  
+              const Text('Eventos', style: TextStyle(fontSize: 30.0)),
+              const SizedBox(height: 20),
               EventoWidget(
-                titulo: 'Charla: Consejos para fortalecer tu ciberseguridad personal',
+                titulo:
+                    'Charla: Consejos para fortalecer tu ciberseguridad personal',
                 descripcion: 'Evento Virtual',
                 fecha: 'abril-16-2025',
               ),
               const SizedBox(height: 10),
               EventoWidget(
-                titulo: 'Charla: Consejos para fortalecer tu ciberseguridad personal',
+                titulo:
+                    'Charla: Consejos para fortalecer tu ciberseguridad personal',
                 descripcion: 'Evento Virtual',
                 fecha: 'abril-16-2025',
               ),
@@ -108,9 +105,7 @@ class MyHomePage extends StatelessWidget {
               const Text(
                 textAlign: TextAlign.right,
                 'Ciberconsejos',
-                style: TextStyle(
-                  fontSize: 30.0,
-                ),
+                style: TextStyle(fontSize: 30.0),
               ),
               const SizedBox(height: 10),
 
@@ -118,7 +113,9 @@ class MyHomePage extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => const ArticuloPage()),
+                    MaterialPageRoute(
+                      builder: (context) => const ArticuloPage(),
+                    ),
                   );
                 },
                 child: const ArticuloHome(
@@ -132,7 +129,9 @@ class MyHomePage extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => const ArticuloPage()),
+                    MaterialPageRoute(
+                      builder: (context) => const ArticuloPage(),
+                    ),
                   );
                 },
                 child: const ArticuloHome(
@@ -147,7 +146,9 @@ class MyHomePage extends StatelessWidget {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => const ArticuloPage()),
+                    MaterialPageRoute(
+                      builder: (context) => const ArticuloPage(),
+                    ),
                   );
                 },
               ),
@@ -162,6 +163,3 @@ class MyHomePage extends StatelessWidget {
     );
   }
 }
-
-
-
