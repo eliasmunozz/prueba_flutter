@@ -21,6 +21,7 @@ Esta aplicación es una réplica móvil del sitio web oficial de la Agencia Naci
 3. Página Quiénes Somos / Misión 
 4. Página Reportar (desde el Menú desplegable)
 
+> Para volver al inicio, se debe presionar en el logotipo.
 > Se mantuvo la estructura, colores, tipografía y organización de contenidos.
 
 ## Repositorio Github

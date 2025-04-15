@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import '../widgets/top_bar.dart';
-import '../widgets/menu_bar.dart'; 
+import '../widgets/menu_bar.dart';
 import '../widgets/footer_ah.dart';
 import '../widgets/sociales_footer.dart';
 
@@ -11,7 +11,7 @@ class ArticuloPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFFF2F2F2), 
+      backgroundColor: const Color(0xFFF2F2F2),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -22,7 +22,10 @@ class ArticuloPage extends StatelessWidget {
 
             // Contenedor del artículo
             Container(
-              margin: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 8.0), 
+              margin: const EdgeInsets.symmetric(
+                horizontal: 12.0,
+                vertical: 8.0,
+              ),
               padding: const EdgeInsets.all(16.0),
               decoration: BoxDecoration(
                 color: Colors.white,
@@ -36,34 +39,34 @@ class ArticuloPage extends StatelessWidget {
                     children: <Widget>[
                       Text(
                         'Compartir: ',
-                        style: TextStyle(fontSize: 16.0, color: Colors.grey[600]),
+                        style: TextStyle(
+                          fontSize: 16.0,
+                          color: Colors.grey[600],
+                        ),
                       ),
                       IconButton(
                         icon: const FaIcon(FontAwesomeIcons.facebook),
                         onPressed: () {},
                         iconSize: 15.0,
                         padding: EdgeInsets.zero,
-                        constraints: const BoxConstraints(),
                       ),
                       IconButton(
                         icon: const FaIcon(FontAwesomeIcons.linkedin),
                         onPressed: () {},
                         iconSize: 15.0,
                         padding: EdgeInsets.zero,
-                        constraints: const BoxConstraints(),
                       ),
                       IconButton(
                         icon: const FaIcon(FontAwesomeIcons.twitter),
                         onPressed: () {},
                         iconSize: 15.0,
-                        padding: EdgeInsets.zero
+                        padding: EdgeInsets.zero,
                       ),
                       IconButton(
                         icon: const FaIcon(FontAwesomeIcons.xTwitter),
                         onPressed: () {},
                         iconSize: 15.0,
-                        padding: EdgeInsets.zero
-                        
+                        padding: EdgeInsets.zero,
                       ),
                       IconButton(
                         icon: const FaIcon(FontAwesomeIcons.telegram),
@@ -82,7 +85,10 @@ class ArticuloPage extends StatelessWidget {
                   const SizedBox(height: 8.0),
                   const Text(
                     'Inicia IV Foro Nacional de Ciberseguridad',
-                    style: TextStyle(fontSize: 24.0, fontWeight: FontWeight.bold),
+                    style: TextStyle(
+                      fontSize: 24.0,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                   const SizedBox(height: 16.0),
                   Container(
