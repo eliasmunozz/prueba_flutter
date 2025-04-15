@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class ImageWithTextWidget extends StatelessWidget {
+class ArticuloHome extends StatelessWidget {
   final String imagePath;
   final String text;
   final String date;
 
-  const ImageWithTextWidget({
+  const ArticuloHome({
     super.key,
     required this.imagePath,
     required this.text,

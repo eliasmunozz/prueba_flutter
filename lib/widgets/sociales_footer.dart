@@ -8,7 +8,7 @@ class FooterSociales extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: const Color(0xFF1A237E), // Match the background color
+      color: const Color(0xFF162556), // Match the background color
       padding: const EdgeInsets.symmetric(vertical: 16.0),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,

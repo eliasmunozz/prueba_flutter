@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class FooterHomeAh extends StatelessWidget {
   const FooterHomeAh({super.key});
@@ -7,7 +8,7 @@ class FooterHomeAh extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.all(16.0),
-      color: Color(0xFF1A237E),
+      color: Color(0xFF162556),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
@@ -56,9 +57,9 @@ class FooterHomeAh extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Image.asset(
-                'assets/images/logo_barra.png',
-                height: 16.0,
+              FaIcon(
+                FontAwesomeIcons.phone,
+                size: 16.0,
                 color: Colors.white,
               ),
               SizedBox(width: 8.0),
@@ -72,9 +73,9 @@ class FooterHomeAh extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Image.asset(
-                'assets/images/logo_barra.png',
-                height: 16.0,
+              FaIcon(
+                FontAwesomeIcons.envelope,
+                size: 16.0,
                 color: Colors.white,
               ),
               SizedBox(width: 8.0),
@@ -88,9 +89,9 @@ class FooterHomeAh extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Image.asset(
-                'assets/images/logo_barra.png',
-                height: 16.0,
+              FaIcon(
+                FontAwesomeIcons.mapMarkerAlt,
+                size: 16.0,
                 color: Colors.white,
               ),
               SizedBox(width: 8.0),

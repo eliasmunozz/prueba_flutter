@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:prueba_application_1/pages/home_page.dart';
+import 'package:prueba_application_1/pages/mision_page.dart'; 
+import 'package:prueba_application_1/pages/reportes_page.dart';
 
-class SearchAndMenu extends StatefulWidget {
-  const SearchAndMenu({super.key});
+class MenuHeader extends StatefulWidget {
+  const MenuHeader({super.key});
 
   @override
-  State<SearchAndMenu> createState() => _SearchAndMenuState();
+  State<MenuHeader> createState() => _SearchEstado();
 }
 
-class _SearchAndMenuState extends State<SearchAndMenu> {
+class _SearchEstado extends State<MenuHeader> {
   bool _isMenuVisible = false;
 
   void _toggleMenu() {
@@ -16,20 +19,30 @@ class _SearchAndMenuState extends State<SearchAndMenu> {
     });
   }
 
+  // Redirige al presionar el item del menú
+  void _navigateToMisionPage() {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => const MisionPage()),
+    );
+  }
+
   Widget _buildMenuItem(String text) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 30.0, vertical: 8.0),
       child: Align(
         alignment: Alignment.centerLeft,
-        child: Text(
-          text,
-          style: const TextStyle(fontSize: 16),
+        child: GestureDetector(
+          onTap: _navigateToMisionPage, // Redirigir a MisionPage al tocar el ítem
+          child: Text(
+            text,
+            style: const TextStyle(fontSize: 16),
+          ),
         ),
       ),
     );
   }
 
-  
   Widget _buildActionButton({
     required String text,
     required Color color,
@@ -42,7 +55,7 @@ class _SearchAndMenuState extends State<SearchAndMenu> {
         backgroundColor: color,
         foregroundColor: Colors.white,
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(5), 
+          borderRadius: BorderRadius.circular(5),
         ),
       ),
       icon: Icon(icon),
@@ -60,13 +73,21 @@ class _SearchAndMenuState extends State<SearchAndMenu> {
           child: Row(
             children: [
               Padding(
-                padding: const EdgeInsets.only(right: 10.0),
-                child: SizedBox(
-                  width: 100,
-                  height: 40,
-                  child: Image.asset(
-                    'assets/images/logo_barra.png',
-                    fit: BoxFit.contain,
+                padding: const EdgeInsets.only(right: 16.0),
+                child: InkWell(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const MyHomePage()),
+                    );
+                  },
+                  child: SizedBox(
+                    width: 100,
+                    height: 40,
+                    child: Image.asset(
+                      'assets/images/logo_barra.png',
+                      fit: BoxFit.contain,
+                    ),
                   ),
                 ),
               ),
@@ -126,8 +147,8 @@ class _SearchAndMenuState extends State<SearchAndMenu> {
                   child: Container(
                     padding: const EdgeInsets.symmetric(vertical: 8.0),
                     decoration: BoxDecoration(
-                      border: Border.all(color: Colors.grey.shade300, width: 1), // Borde gris
-                      borderRadius: BorderRadius.circular(5.0), // Bordes redondeados
+                      border: Border.all(color: Colors.grey.shade300, width: 1),
+                      borderRadius: BorderRadius.circular(5.0),
                     ),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -148,7 +169,10 @@ class _SearchAndMenuState extends State<SearchAndMenu> {
                                 color: const Color(0xFFFF0050),
                                 icon: Icons.report,
                                 onPressed: () {
-                                  print('Reportar pressed');
+                                   Navigator.push(
+                                    context,
+                                    MaterialPageRoute(builder: (context) => const ReportarPage()),
+                                  );
                                 },
                               ),
                               const SizedBox(height: 10),
@@ -182,5 +206,6 @@ class _SearchAndMenuState extends State<SearchAndMenu> {
     );
   }
 }
+
 
 

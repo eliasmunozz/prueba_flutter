@@ -7,7 +7,7 @@ import '../widgets/boton_home.dart';
 import '../widgets/eventos_home.dart';
 import '../widgets/footer_ah.dart';
 import '../widgets/sociales_footer.dart';
-
+import 'articulo_page.dart';
 
 class MyHomePage extends StatelessWidget {
   const MyHomePage({super.key});
@@ -22,9 +22,9 @@ class MyHomePage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const TopBar(),
-              const SearchAndMenu(),
+              const MenuHeader(),
               const SizedBox(height: 20),
-              LocalImageSliderWithComment(
+              SliderHome(
                 imageData: [
                   {
                     'path': 'assets/images/logo_barra.png',
@@ -50,25 +50,41 @@ class MyHomePage extends StatelessWidget {
               ),
               const SizedBox(height: 20),
 
-              // Noticias una debajo de la otra
-              const ImageWithTextWidget(
-                imagePath: 'assets/images/noticia1.png',
-                text: 'Noticia 1: Lanzamiento del nuevo producto',
-                date: '01/10/20',
+              
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const ArticuloPage()),
+                  );
+                },
+                child: const ArticuloHome(
+                  imagePath: 'assets/images/noticia1.png',
+                  text: 'Noticia 1: Lanzamiento del nuevo producto',
+                  date: '01/10/20',
+                ),
               ),
-              SizedBox(height: 10), // Espacio entre noticias
-              const ImageWithTextWidget(
-                imagePath: 'assets/images/noticia1.png',
-                text: 'Noticia 2: Actualización importante',
-                date: '01/10/20',
+              const SizedBox(height: 10),
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const ArticuloPage()),
+                  );
+                },
+                child: const ArticuloHome(
+                  imagePath: 'assets/images/noticia1.png',
+                  text: 'Noticia 2: Actualización importante',
+                  date: '01/10/20',
+                ),
               ),
-              TextButtonRightAligned(
-                  buttonText: 'Más Noticias Recientes',
-                  onPressed: () {
-                    // Acción a realizar cuando se presiona el botón
-                    print('Botón "${'Más Noticias Recientes'}" presionado');
-                  },
+              BotonHomeSig(
+                buttonText: 'Más Noticias Recientes',
+                onPressed: () {
+                  print('Botón "Más Noticias Recientes" presionado');
+                },
               ),
+
               const Text(
                 'Eventos',
                 style: TextStyle(
@@ -81,13 +97,14 @@ class MyHomePage extends StatelessWidget {
                 descripcion: 'Evento Virtual',
                 fecha: 'abril-16-2025',
               ),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               EventoWidget(
                 titulo: 'Charla: Consejos para fortalecer tu ciberseguridad personal',
                 descripcion: 'Evento Virtual',
                 fecha: 'abril-16-2025',
               ),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
+
               const Text(
                 textAlign: TextAlign.right,
                 'Ciberconsejos',
@@ -95,26 +112,47 @@ class MyHomePage extends StatelessWidget {
                   fontSize: 30.0,
                 ),
               ),
-              SizedBox(height: 10),
-              const ImageWithTextWidget(
-                imagePath: 'assets/images/noticia1.png',
-                text: 'Ciberconsejo 1',
-                date: '01/10/20',
+              const SizedBox(height: 10),
+
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const ArticuloPage()),
+                  );
+                },
+                child: const ArticuloHome(
+                  imagePath: 'assets/images/noticia1.png',
+                  text: 'Ciberconsejo 1',
+                  date: '01/10/20',
+                ),
               ),
-              SizedBox(height: 10),
-              const ImageWithTextWidget(
-                imagePath: 'assets/images/noticia1.png',
-                text: 'Ciberconsejo 2',
-                date: '01/10/20',
+              const SizedBox(height: 10),
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const ArticuloPage()),
+                  );
+                },
+                child: const ArticuloHome(
+                  imagePath: 'assets/images/noticia1.png',
+                  text: 'Ciberconsejo 2',
+                  date: '01/10/20',
+                ),
               ),
-              TextButtonRightAligned(
-                  buttonText: 'Más ciberconsejos',
-                  onPressed: () {
-                    // Acción a realizar cuando se presiona el botón
-                    print('Botón "${'Más Noticias Recientes'}" presionado');
-                  },
+
+              BotonHomeSig(
+                buttonText: 'Más ciberconsejos',
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const ArticuloPage()),
+                  );
+                },
               ),
-              SizedBox(height: 10),
+
+              const SizedBox(height: 10),
               FooterHomeAh(),
               FooterSociales(),
             ],

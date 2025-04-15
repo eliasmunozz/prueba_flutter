@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-class TextButtonRightAligned extends StatelessWidget {
+class BotonHomeSig extends StatelessWidget {
   final String buttonText;
   final VoidCallback? onPressed;
 
-  const TextButtonRightAligned({
+  const BotonHomeSig({
     super.key,
     required this.buttonText,
     this.onPressed,

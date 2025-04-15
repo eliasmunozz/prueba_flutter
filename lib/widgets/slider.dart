@@ -1,20 +1,21 @@
 import 'package:flutter/material.dart';
 
-class LocalImageSliderWithComment extends StatefulWidget {
+class SliderHome extends StatefulWidget {
   final List<Map<String, String>> imageData; // Cambiado a mapa
   final String comment;
 
-  const LocalImageSliderWithComment({
+  const SliderHome({
     super.key,
     required this.imageData,
     required this.comment,
   });
 
   @override
-  _LocalImageSliderWithCommentState createState() => _LocalImageSliderWithCommentState();
+  // ignore: library_private_types_in_public_api
+  _EstadoSlide createState() => _EstadoSlide();
 }
 
-class _LocalImageSliderWithCommentState extends State<LocalImageSliderWithComment> {
+class _EstadoSlide extends State<SliderHome> {
   late PageController _pageController;
   int _currentPage = 0;
 
